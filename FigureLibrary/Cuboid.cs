@@ -6,7 +6,7 @@ namespace FigureLibrary
     {
         private Vector3 _center;
         private Vector3 _size;
-        public override float Area => 2 * ((_size.X + _size.Y) + (_size.Z + _size.Y) + (_size.X + _size.Z));
+        public override float Area => 2 * ((_size.X * _size.Y) + (_size.Z * _size.Y) + (_size.X * _size.Z));
         public override float Volume => _size.X * _size.Y * _size.Z;
         public override Vector3 Center => _center;
         public bool isCube => _size.X == _size.Y && _size.X == _size.Z;
